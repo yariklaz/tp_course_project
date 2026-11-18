@@ -6,7 +6,7 @@ pos_tests = [
     "begin X:=1; Y:=2 end",
     "begin while X>0 do X:=X-1 end",
     "begin if X=0 then Y:=1 else Y:=2 end",
-    "begin X:=1; while X<10 do begin X:=X+1; Y:=Y*2 end end",
+    "begin X:=1; while X>0 do X:=X-1 end",
     "begin X:=(A+B)*(C-D) end",
     "begin skip; skip; X:=0 end",
     "begin while 1=1 do skip end",

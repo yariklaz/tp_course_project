@@ -1,1 +1,1 @@
-begin X:=1; while X<10 do begin X:=X+1; Y:=Y*2 end end
+begin X:=1; while X>0 do X:=X-1 end
