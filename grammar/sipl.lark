@@ -1,0 +1,37 @@
+?start: prog
+prog: "begin" stms "end"
+
+?stms: stm (";" stm)* -> block
+
+?stm: var ":=" aexp                           -> assign
+    | "if" bexp "then" stm "else" stm         -> if_else
+    | "while" bexp "do" stm                   -> while_do
+    | "begin" stms "end"                      -> block_stm
+    | "skip"                                  -> skip
+
+?aexp: aexp "+" term -> add
+     | aexp "-" term -> sub
+     | term
+
+?term: term "*" factor -> mul
+     | factor
+
+?factor: NUMBER                               -> number
+       | var                                  -> variable
+       | "(" aexp ")"                         -> parens
+
+?bexp: bexp "v" bterm                         -> or_op
+     | bterm
+
+?bterm: "not" bfactor                         -> not_op
+      | bfactor
+
+?bfactor: aexp ">" aexp                       -> greater
+        | aexp "=" aexp                       -> equal
+        | "(" bexp ")"                        -> bparens
+
+var: /[a-zA-Z_][a-zA-Z0-9_]*/
+NUMBER: /-?[0-9]+/
+
+%import common.WS
+%ignore WS

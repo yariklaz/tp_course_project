@@ -1,0 +1,244 @@
+SERVER STARTED
+RECV: {'command': 'initialize', 'arguments': {'clientID': 'vscode', 'clientName': 'Visual Studio Code', 'adapterID': 'sipl', 'pathFormat': 'path', 'linesStartAt1': True, 'columnsStartAt1': True, 'supportsVariableType': True, 'supportsVariablePaging': True, 'supportsRunInTerminalRequest': True, 'locale': 'en', 'supportsProgressReporting': True, 'supportsInvalidatedEvent': True, 'supportsMemoryReferences': True, 'supportsArgsCanBeInterpretedByShell': True, 'supportsMemoryEvent': True, 'supportsStartDebuggingRequest': True, 'supportsANSIStyling': True}, 'type': 'request', 'seq': 1}
+SENT: {'type': 'response', 'request_seq': 1, 'success': True, 'command': 'initialize', 'seq': 1}
+SENT: {'type': 'event', 'event': 'initialized', 'seq': 2}
+RECV: {'command': 'launch', 'arguments': {'type': 'sipl', 'request': 'launch', 'name': 'Debug SIPL', 'program': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl', 'state': '{"X": 5, "Y": 2}', '__configurationTarget': 6, '__sessionId': '87d9ce82-2cf0-403c-9b45-899b0f38be6e'}, 'type': 'request', 'seq': 2}
+SENT: {'type': 'response', 'request_seq': 2, 'success': True, 'command': 'launch', 'seq': 3}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'entry', 'threadId': 1}, 'seq': 4}
+RECV: {'command': 'setBreakpoints', 'arguments': {'source': {'name': 'example1.sipl', 'path': 'c:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}, 'lines': [3], 'breakpoints': [{'line': 3}], 'sourceModified': False}, 'type': 'request', 'seq': 3}
+SENT: {'type': 'response', 'request_seq': 3, 'success': True, 'command': 'setBreakpoints', 'body': {'breakpoints': [{'verified': True, 'line': 3}]}, 'seq': 5}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 4}
+SENT: {'type': 'response', 'request_seq': 4, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 6}
+RECV: {'command': 'setExceptionBreakpoints', 'arguments': {'filters': []}, 'type': 'request', 'seq': 5}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 6}
+SENT: {'type': 'response', 'request_seq': 6, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 1, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 7}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 7}
+SENT: {'type': 'response', 'request_seq': 7, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 8}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 8}
+SENT: {'type': 'response', 'request_seq': 8, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}]}, 'seq': 9}
+RECV: {'command': 'continue', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 9}
+SENT: {'type': 'response', 'request_seq': 9, 'success': True, 'command': 'continue', 'seq': 10}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 11}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 10}
+SENT: {'type': 'response', 'request_seq': 10, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 12}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 11}
+SENT: {'type': 'response', 'request_seq': 11, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 13}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 12}
+SENT: {'type': 'response', 'request_seq': 12, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 14}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 13}
+SENT: {'type': 'response', 'request_seq': 13, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 15}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 14}
+SENT: {'type': 'response', 'request_seq': 14, 'success': True, 'command': 'next', 'seq': 16}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 17}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 15}
+SENT: {'type': 'response', 'request_seq': 15, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 18}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 16}
+SENT: {'type': 'response', 'request_seq': 16, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 19}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 17}
+SENT: {'type': 'response', 'request_seq': 17, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 20}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 18}
+SENT: {'type': 'response', 'request_seq': 18, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 21}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 19}
+SENT: {'type': 'response', 'request_seq': 19, 'success': True, 'command': 'next', 'seq': 22}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 23}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 20}
+SENT: {'type': 'response', 'request_seq': 20, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 24}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 21}
+SENT: {'type': 'response', 'request_seq': 21, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 5, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 25}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 22}
+SENT: {'type': 'response', 'request_seq': 22, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 26}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 23}
+SENT: {'type': 'response', 'request_seq': 23, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 27}
+RECV: {'command': 'continue', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 24}
+SENT: {'type': 'response', 'request_seq': 24, 'success': True, 'command': 'continue', 'seq': 28}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 29}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 25}
+SENT: {'type': 'response', 'request_seq': 25, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 30}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 26}
+SENT: {'type': 'response', 'request_seq': 26, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 31}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 27}
+SENT: {'type': 'response', 'request_seq': 27, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 32}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 28}
+SENT: {'type': 'response', 'request_seq': 28, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 33}
+RECV: {'command': 'continue', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 29}
+SENT: {'type': 'response', 'request_seq': 29, 'success': True, 'command': 'continue', 'seq': 34}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 35}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 30}
+SENT: {'type': 'response', 'request_seq': 30, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 36}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 31}
+SENT: {'type': 'response', 'request_seq': 31, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 37}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 32}
+SENT: {'type': 'response', 'request_seq': 32, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 38}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 33}
+SENT: {'type': 'response', 'request_seq': 33, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '0', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 39}
+RECV: {'command': 'continue', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 34}
+SENT: {'type': 'response', 'request_seq': 34, 'success': True, 'command': 'continue', 'seq': 40}
+SENT: {'type': 'event', 'event': 'terminated', 'seq': 41}
+RECV: {'command': 'disconnect', 'arguments': {'restart': False}, 'type': 'request', 'seq': 35}
+SENT: {'type': 'response', 'request_seq': 35, 'success': True, 'command': 'disconnect', 'seq': 42}
+SERVER STARTED
+RECV: {'command': 'initialize', 'arguments': {'clientID': 'vscode', 'clientName': 'Visual Studio Code', 'adapterID': 'sipl', 'pathFormat': 'path', 'linesStartAt1': True, 'columnsStartAt1': True, 'supportsVariableType': True, 'supportsVariablePaging': True, 'supportsRunInTerminalRequest': True, 'locale': 'en', 'supportsProgressReporting': True, 'supportsInvalidatedEvent': True, 'supportsMemoryReferences': True, 'supportsArgsCanBeInterpretedByShell': True, 'supportsMemoryEvent': True, 'supportsStartDebuggingRequest': True, 'supportsANSIStyling': True}, 'type': 'request', 'seq': 1}
+SENT: {'type': 'response', 'request_seq': 1, 'success': True, 'command': 'initialize', 'seq': 1}
+SENT: {'type': 'event', 'event': 'initialized', 'seq': 2}
+RECV: {'command': 'launch', 'arguments': {'type': 'sipl', 'request': 'launch', 'name': 'Debug SIPL', 'program': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl', 'state': '{"X": 5, "Y": 2}', '__configurationTarget': 6, '__sessionId': 'a1fd2869-d213-4d29-b7e2-60534db8c335'}, 'type': 'request', 'seq': 2}
+SENT: {'type': 'response', 'request_seq': 2, 'success': True, 'command': 'launch', 'seq': 3}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'entry', 'threadId': 1}, 'seq': 4}
+RECV: {'command': 'setBreakpoints', 'arguments': {'source': {'name': 'example1.sipl', 'path': 'c:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}, 'lines': [3], 'breakpoints': [{'line': 3}], 'sourceModified': False}, 'type': 'request', 'seq': 3}
+SENT: {'type': 'response', 'request_seq': 3, 'success': True, 'command': 'setBreakpoints', 'body': {'breakpoints': [{'verified': True, 'line': 3}]}, 'seq': 5}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 4}
+SENT: {'type': 'response', 'request_seq': 4, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 6}
+RECV: {'command': 'setExceptionBreakpoints', 'arguments': {'filters': []}, 'type': 'request', 'seq': 5}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 6}
+SENT: {'type': 'response', 'request_seq': 6, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 1, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 7}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 7}
+SENT: {'type': 'response', 'request_seq': 7, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 8}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 8}
+SENT: {'type': 'response', 'request_seq': 8, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}]}, 'seq': 9}
+RECV: {'command': 'continue', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 9}
+SENT: {'type': 'response', 'request_seq': 9, 'success': True, 'command': 'continue', 'seq': 10}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 11}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 10}
+SENT: {'type': 'response', 'request_seq': 10, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 12}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 11}
+SENT: {'type': 'response', 'request_seq': 11, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 13}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 12}
+SENT: {'type': 'response', 'request_seq': 12, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 14}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 13}
+SENT: {'type': 'response', 'request_seq': 13, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 15}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 14}
+SENT: {'type': 'response', 'request_seq': 14, 'success': True, 'command': 'next', 'seq': 16}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 17}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 15}
+SENT: {'type': 'response', 'request_seq': 15, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 18}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 16}
+SENT: {'type': 'response', 'request_seq': 16, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 19}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 17}
+SENT: {'type': 'response', 'request_seq': 17, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 20}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 18}
+SENT: {'type': 'response', 'request_seq': 18, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 21}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 19}
+SENT: {'type': 'response', 'request_seq': 19, 'success': True, 'command': 'next', 'seq': 22}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 23}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 20}
+SENT: {'type': 'response', 'request_seq': 20, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 24}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 21}
+SENT: {'type': 'response', 'request_seq': 21, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 5, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 25}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 22}
+SENT: {'type': 'response', 'request_seq': 22, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 26}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 23}
+SENT: {'type': 'response', 'request_seq': 23, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '1', 'variablesReference': 0}]}, 'seq': 27}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 24}
+SENT: {'type': 'response', 'request_seq': 24, 'success': True, 'command': 'next', 'seq': 28}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 29}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 25}
+SENT: {'type': 'response', 'request_seq': 25, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 30}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 26}
+SENT: {'type': 'response', 'request_seq': 26, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 5, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 31}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 27}
+SENT: {'type': 'response', 'request_seq': 27, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 32}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 28}
+SENT: {'type': 'response', 'request_seq': 28, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 33}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 29}
+SENT: {'type': 'response', 'request_seq': 29, 'success': True, 'command': 'next', 'seq': 34}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 35}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 30}
+SENT: {'type': 'response', 'request_seq': 30, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 36}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 31}
+SENT: {'type': 'response', 'request_seq': 31, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 6, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 37}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 32}
+SENT: {'type': 'response', 'request_seq': 32, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 38}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 33}
+SENT: {'type': 'response', 'request_seq': 33, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '2', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 39}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 34}
+SENT: {'type': 'response', 'request_seq': 34, 'success': True, 'command': 'next', 'seq': 40}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 41}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 35}
+SENT: {'type': 'response', 'request_seq': 35, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 42}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 36}
+SENT: {'type': 'response', 'request_seq': 36, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 6, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 43}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 37}
+SENT: {'type': 'response', 'request_seq': 37, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 44}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 38}
+SENT: {'type': 'response', 'request_seq': 38, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 45}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 39}
+SENT: {'type': 'response', 'request_seq': 39, 'success': True, 'command': 'next', 'seq': 46}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 47}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 40}
+SENT: {'type': 'response', 'request_seq': 40, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 48}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 41}
+SENT: {'type': 'response', 'request_seq': 41, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 49}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 42}
+SENT: {'type': 'response', 'request_seq': 42, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 50}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 43}
+SENT: {'type': 'response', 'request_seq': 43, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 51}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 44}
+SENT: {'type': 'response', 'request_seq': 44, 'success': True, 'command': 'next', 'seq': 52}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 53}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 45}
+SENT: {'type': 'response', 'request_seq': 45, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 54}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 46}
+SENT: {'type': 'response', 'request_seq': 46, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 5, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 55}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 47}
+SENT: {'type': 'response', 'request_seq': 47, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 56}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 48}
+SENT: {'type': 'response', 'request_seq': 48, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '5', 'variablesReference': 0}]}, 'seq': 57}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 49}
+SENT: {'type': 'response', 'request_seq': 49, 'success': True, 'command': 'next', 'seq': 58}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 59}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 50}
+SENT: {'type': 'response', 'request_seq': 50, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 60}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 51}
+SENT: {'type': 'response', 'request_seq': 51, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 5, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 61}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 52}
+SENT: {'type': 'response', 'request_seq': 52, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 62}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 53}
+SENT: {'type': 'response', 'request_seq': 53, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 63}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 54}
+SENT: {'type': 'response', 'request_seq': 54, 'success': True, 'command': 'next', 'seq': 64}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 65}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 55}
+SENT: {'type': 'response', 'request_seq': 55, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 66}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 56}
+SENT: {'type': 'response', 'request_seq': 56, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 6, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 67}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 57}
+SENT: {'type': 'response', 'request_seq': 57, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 68}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 58}
+SENT: {'type': 'response', 'request_seq': 58, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '1', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 69}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 59}
+SENT: {'type': 'response', 'request_seq': 59, 'success': True, 'command': 'next', 'seq': 70}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 71}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 60}
+SENT: {'type': 'response', 'request_seq': 60, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 72}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 61}
+SENT: {'type': 'response', 'request_seq': 61, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 6, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 73}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 62}
+SENT: {'type': 'response', 'request_seq': 62, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 74}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 63}
+SENT: {'type': 'response', 'request_seq': 63, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '0', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 75}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 64}
+SENT: {'type': 'response', 'request_seq': 64, 'success': True, 'command': 'next', 'seq': 76}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 77}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 65}
+SENT: {'type': 'response', 'request_seq': 65, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 78}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 66}
+SENT: {'type': 'response', 'request_seq': 66, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 3, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 79}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 67}
+SENT: {'type': 'response', 'request_seq': 67, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 80}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 68}
+SENT: {'type': 'response', 'request_seq': 68, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '0', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 81}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 69}
+SENT: {'type': 'response', 'request_seq': 69, 'success': True, 'command': 'next', 'seq': 82}
+SENT: {'type': 'event', 'event': 'stopped', 'body': {'reason': 'step', 'threadId': 1}, 'seq': 83}
+RECV: {'command': 'threads', 'type': 'request', 'seq': 70}
+SENT: {'type': 'response', 'request_seq': 70, 'success': True, 'command': 'threads', 'body': {'threads': [{'id': 1, 'name': 'main'}]}, 'seq': 84}
+RECV: {'command': 'stackTrace', 'arguments': {'threadId': 1, 'startFrame': 0, 'levels': 20}, 'type': 'request', 'seq': 71}
+SENT: {'type': 'response', 'request_seq': 71, 'success': True, 'command': 'stackTrace', 'body': {'stackFrames': [{'id': 1, 'name': 'main', 'line': 1, 'column': 1, 'source': {'path': 'C:\\vs_lib\\Tp_project\\sipl-toolkit\\examples\\example1.sipl'}}]}, 'seq': 85}
+RECV: {'command': 'scopes', 'arguments': {'frameId': 1}, 'type': 'request', 'seq': 72}
+SENT: {'type': 'response', 'request_seq': 72, 'success': True, 'command': 'scopes', 'body': {'scopes': [{'name': 'Local', 'variablesReference': 1, 'expensive': False}]}, 'seq': 86}
+RECV: {'command': 'variables', 'arguments': {'variablesReference': 1}, 'type': 'request', 'seq': 73}
+SENT: {'type': 'response', 'request_seq': 73, 'success': True, 'command': 'variables', 'body': {'variables': [{'name': 'X', 'value': '5', 'variablesReference': 0}, {'name': 'Y', 'value': '0', 'variablesReference': 0}, {'name': 'R', 'value': '25', 'variablesReference': 0}]}, 'seq': 87}
+RECV: {'command': 'next', 'arguments': {'threadId': 1}, 'type': 'request', 'seq': 74}
+SENT: {'type': 'response', 'request_seq': 74, 'success': True, 'command': 'next', 'seq': 88}
+SENT: {'type': 'event', 'event': 'terminated', 'seq': 89}
+RECV: {'command': 'disconnect', 'arguments': {'restart': False}, 'type': 'request', 'seq': 75}
+SENT: {'type': 'response', 'request_seq': 75, 'success': True, 'command': 'disconnect', 'seq': 90}

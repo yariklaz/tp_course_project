@@ -1,0 +1,1 @@
+begin if A>B then begin A:=A-B end else begin B:=B-A end end

@@ -1,0 +1,48 @@
+{
+  "name": "sipl-toolkit",
+  "publisher": "yaroslav-lazyrko",
+  "displayName": "SIPL Toolkit",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "sipl",
+        "extensions": [".sipl"]
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "sipl"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "sipl",
+        "label": "SIPL Debugger",
+        "languages": ["sipl"],
+        "program": "./run_dap.bat",
+        "configurationAttributes": {
+          "launch": {
+            "required": ["program"],
+            "properties": {
+              "program": { "type": "string" },
+              "state": { "type": "string", "default": "{}" }
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "type": "sipl",
+            "request": "launch",
+            "name": "Debug SIPL",
+            "program": "${file}",
+            "state": "{\"X\": 5, \"Y\": 2}"
+          }
+        ]
+      }
+    ]
+  }
+}
