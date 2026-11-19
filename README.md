@@ -39,6 +39,7 @@ pip install lark
 Парсити та запускати SIPL-програми можна напряму з консолі:
 
 ```bash
+$env:PYTHONPATH="src"
 python run.py examples/example1.sipl --state "{\"X\": 5, \"Y\": 2}"
 ```
 
